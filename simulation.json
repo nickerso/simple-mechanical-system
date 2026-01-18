@@ -1,0 +1,71 @@
+{
+  "input": [
+    {
+      "defaultValue": 1,
+      "id": "q_1",
+      "maximumValue": 10,
+      "minimumValue": -10,
+      "name": "Initial displacement (q_1)"
+    },
+    {
+      "defaultValue": 20,
+      "id": "C",
+      "maximumValue": 50,
+      "minimumValue": 0,
+      "name": "Spring constant (C)"
+    },
+    {
+      "defaultValue": 1,
+      "id": "R",
+      "maximumValue": 10,
+      "minimumValue": 0,
+      "name": "Damping coefficient (R)"
+    },
+    {
+      "defaultValue": 10,
+      "id": "L",
+      "maximumValue": 20,
+      "minimumValue": 0,
+      "name": "Mass (L)"
+    }
+  ],
+  "output": {
+    "data": [
+      {
+        "id": "time",
+        "name": "main/t"
+      },
+      {
+        "id": "displacement",
+        "name": "main/q_1"
+      }
+    ],
+    "plots": [
+      {
+        "xAxisTitle": "Time",
+        "xValue": "time",
+        "yAxisTitle": "Displacement",
+        "yValue": "displacement",
+        "name": "<i>q_1</i>"
+      }
+    ]
+  },
+  "parameters": [
+    {
+      "name": "main/q_1",
+      "value": "q_1"
+    },
+    {
+      "name": "main/C",
+      "value": "C"
+    },
+    {
+      "name": "main/R",
+      "value": "R/10"
+    },
+    {
+      "name": "main/L",
+      "value": "L"
+    }
+  ]
+}
