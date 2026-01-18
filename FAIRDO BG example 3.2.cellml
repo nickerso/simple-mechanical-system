@@ -28,7 +28,7 @@
         <unit exponent="-2" units="metre"/>
     </units>
     <component name="main">
-        <variable initial_value="0" name="t" units="second"/>
+        <variable name="t" units="second"/>
         <!-- State variables-->
         <variable initial_value="1" name="q_1" units="metre"/>
         <variable initial_value="0" name="v_1" units="m_per_s"/>
@@ -64,16 +64,17 @@
                 </apply>
                 <ci>a_1</ci>
             </apply>
+            <!-- u_C         = -u_R-u_L;-->
             <apply>
                 <eq/>
-                <ci>u_C</ci>
+                <ci>u_L</ci>
                 <apply>
                     <minus/>
                     <apply>
                         <minus/>
                         <ci>u_R</ci>
                     </apply>
-                    <ci>u_L</ci>
+                    <ci>u_C</ci>
                 </apply>
             </apply>
             <!-- Constitutive relations-->
@@ -95,12 +96,13 @@
                     <ci>R</ci>
                 </apply>
             </apply>
+            <!-- u_L = a_1*L;-->
             <apply>
                 <eq/>
-                <ci>u_L</ci>
+                <ci>a_1</ci>
                 <apply>
-                    <times/>
-                    <ci>a_1</ci>
+                    <divide/>
+                    <ci>u_L</ci>
                     <ci>L</ci>
                 </apply>
             </apply>
